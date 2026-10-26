@@ -1,0 +1,182 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 48px 16px;
+  background: linear-gradient(160deg, #eef2ff 0%, #f8fafc 100%);
+}
+
+.card {
+  width: 100%;
+  max-width: 520px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.title {
+  margin: 0 0 8px;
+  font-size: 1.9rem;
+  color: #1e293b;
+}
+
+.stats {
+  display: flex;
+  gap: 16px;
+  margin: 0 0 20px;
+  font-size: 0.95rem;
+  color: #64748b;
+}
+
+/* Add task form */
+.task-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.task-input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 14px;
+  font-size: 1rem;
+  color: #1e293b;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.task-input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.add-button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: #4f46e5;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-button:hover {
+  background: #4338ca;
+}
+
+/* Task list */
+.task-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+.task-label {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.task-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #4f46e5;
+  cursor: pointer;
+}
+
+.task-text {
+  color: #1e293b;
+  overflow-wrap: anywhere;
+}
+
+.task-item.completed .task-text {
+  color: #94a3b8;
+  text-decoration: line-through;
+}
+
+.delete-button {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  color: #dc2626;
+  background: transparent;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.delete-button:hover {
+  background: #fef2f2;
+}
+
+/* Empty state */
+.empty-message {
+  margin: 8px 0 0;
+  padding: 28px 16px;
+  text-align: center;
+  color: #64748b;
+  background: #f8fafc;
+  border: 1.5px dashed #cbd5e1;
+  border-radius: 10px;
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  .app {
+    padding: 24px 12px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}
+
+/* Filter buttons */
+.filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.filter-button {
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  color: #64748b;
+  background: #f1f5f9;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.filter-button:hover {
+  background: #e2e8f0;
+}
+
+.filter-button.active {
+  color: #ffffff;
+  background: #4f46e5;
+}
